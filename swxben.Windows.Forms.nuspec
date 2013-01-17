@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>swxben.Windows.Forms</id>
+    <version>1.0.0</version>
+    <title>swxben.Windows.Forms</title>
+    <authors>Software By Ben, Ben Scott</authors>
+    <owners>Software by Ben, Ben Scott</owners>
+    <licenseUrl>http://creativecommons.org/licenses/by-sa/3.0/</licenseUrl>
+    <projectUrl>https://github.com/swxben/swxben.Windows.Forms</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>A small library of Winforms based dialogs and helpers</description>
+    <summary>A small library of Winforms based dialogs and helpers</summary>
+    <releaseNotes>First public version</releaseNotes>
+    <tags>forms winforms windows</tags>
+  </metadata>
+  <files>
+    <file src="src\swxben.Windows.Forms\bin\Release\swxben.Windows.Forms.dll" target="lib\net40\swxben.Windows.Forms.dll" />
+  </files>
+</package>
