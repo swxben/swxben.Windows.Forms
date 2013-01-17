@@ -18,9 +18,10 @@ namespace swxben.Windows.Forms
             NumericUnit
         }
 
-        public static void AssignTo(ListView listView)
+        public static void AssignTo(ListView listView, params ColumnFormat[] formats)
         {
-            new ListViewItemTextComparer(listView);
+            var comparer = new ListViewItemTextComparer(listView);
+            comparer.AddColumnFormats(formats);
         }
 
         readonly Regex DECIMAL_REGEX = new Regex(@"[^\d]");
