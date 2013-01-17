@@ -38,14 +38,14 @@ Generic-typed item selection with string search.
     // search.SelectedItem is the selected Person object
 
 
-### GenericDetailedSearchDialog
+### GenericDetailedListSearchDialog
 
 Similar to `GenericListSearchDialog` but receives an array of column names, and the display callback returns a corresponding array of column values.
 
     class Person { string Name; string Age; }
     // ...
     var people = new Person[] {...};
-    var search = new GenericDetailedSearchDialog(
+    var search = new GenericDetailedListSearchDialog(
         "Select a person", 
         people, 
         new[] { "Name", "Age" },
