@@ -31,7 +31,7 @@ namespace swxben.Windows.Forms.TestApplication
         }
         private void GenericListSearchButton_Click(object sender, EventArgs e)
         {
-            IGenericListSearch<Vampire> search = new GenericListSearchForm<Vampire>();
+            IGenericListSearch<Vampire> search = new GenericListSearchDialog<Vampire>();
             var vampires = new[]
                 {
                     new Vampire {Name = "Bill", Age = 172},

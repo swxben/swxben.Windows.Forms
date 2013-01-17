@@ -1,6 +1,6 @@
 ﻿namespace swxben.Windows.Forms.Dialogs
 {
-    partial class GenericListSearchForm<T>
+    partial class GenericListSearchDialog<T>
     {
         /// <summary>
         /// Required designer variable.
@@ -132,7 +132,7 @@
             this.ControlBox = false;
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Name = "GenericListSearchForm";
+            this.Name = "GenericListSearchDialog";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "GenericListSearchDialog";

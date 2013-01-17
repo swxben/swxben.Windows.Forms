@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace swxben.Windows.Forms.Dialogs
 {
-    public partial class GenericListSearchForm<T> : Form, IGenericListSearch<T>
+    public partial class GenericListSearchDialog<T> : Form, IGenericListSearch<T>
     {
         private const string FILTER_PROMPT = "Search...";
 
@@ -33,12 +33,12 @@ namespace swxben.Windows.Forms.Dialogs
             }
         }
 
-        public GenericListSearchForm()
+        public GenericListSearchDialog()
         {
             InitializeComponent();
         }
 
-        public GenericListSearchForm(string title, IEnumerable<T> source, Func<T, string> displayCallback)
+        public GenericListSearchDialog(string title, IEnumerable<T> source, Func<T, string> displayCallback)
         {
             InitializeComponent();
             SetValues(title, source, displayCallback);
