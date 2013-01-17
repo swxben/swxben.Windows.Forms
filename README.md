@@ -37,7 +37,7 @@ Generic-typed item selection with string search.
     search.ShowDialog();
     // search.SelectedItem is the selected Person object
 
-`GenericListSearchDialog` has a `FixWidth()` method which increases the width the dialog based on the width of the items in the list.
+`GenericListSearchDialog` has a `FixWidth()` method which increases the width of the dialog based on the width of the items in the list.
 
 
 ### GenericDetailedListSearchDialog
@@ -55,7 +55,7 @@ Similar to `GenericListSearchDialog` but receives an array of column names, and 
     search.ShowDialog();
     // search.SelectedItem is the selected Person object
 
-`GenericDetailedListSearchDialog` has a `FixWidth()` method which increases the width the dialog based on the width of the items in the list.
+`GenericDetailedListSearchDialog` has a `FixWidth()` method which increases the width of the dialog based on the width of the items in the list.
 
 
 ### StringListSearchDialog
@@ -66,7 +66,7 @@ Search through a list of strings.
     search.ShowDialog();
     // search.SelectedItem is the selected string
 
-`StringListSearchDialog` has a `FixWidth()` method which increases the width the dialog based on the width of the items in the list.
+`StringListSearchDialog` has a `FixWidth()` method which increases the width of the dialog based on the width of the items in the list.
 
 
 ### TextPromptDialog
