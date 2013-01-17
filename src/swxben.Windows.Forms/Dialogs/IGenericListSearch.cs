@@ -7,7 +7,7 @@ namespace swxben.Windows.Forms.Dialogs
     public interface IGenericListSearch<T>
     {
         T SelectedItem { get; set; }
-        void SetValues(IEnumerable<T> source, Func<T, string> displayCallback);
+        void SetValues(string title, IEnumerable<T> source, Func<T, string> displayCallback);
         DialogResult ShowDialog();
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace swxben.Windows.Forms.Dialogs
 {
-    partial class StringListSearchForm
+    partial class StringListSearchDialog
     {
         /// <summary>
         /// Required designer variable.
@@ -122,7 +122,7 @@
             // 
             this.columnHeader1.Text = "Items";
             // 
-            // StringListSearchForm
+            // StringListSearchDialog
             // 
             this.AcceptButton = this.SelectItemButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -132,10 +132,10 @@
             this.ControlBox = false;
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Name = "StringListSearchForm";
+            this.Name = "StringListSearchDialog";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "StringListSearchForm";
+            this.Text = "StringListSearchDialog";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.flowLayoutPanel1.ResumeLayout(false);

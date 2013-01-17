@@ -3,7 +3,7 @@ using System.Windows.Forms;
 
 namespace swxben.Windows.Forms.Dialogs
 {
-    public partial class TextPromptForm : Form, ITextPrompt
+    public partial class TextPromptDialog : Form, ITextPrompt
     {
         public string Value
         {
@@ -11,25 +11,25 @@ namespace swxben.Windows.Forms.Dialogs
             set { InputTextBox.Text = string.IsNullOrEmpty(value) ? " " : value; }
         }
 
-        public TextPromptForm()
+        public TextPromptDialog()
         {
             InitializeComponent();
             SetValues("Enter a value:", "", "");
         }
 
-        public TextPromptForm(string prompt)
+        public TextPromptDialog(string prompt)
         {
             InitializeComponent();
             SetValues(prompt, "", "");
         }
 
-        public TextPromptForm(string prompt, string caption)
+        public TextPromptDialog(string prompt, string caption)
         {
             InitializeComponent();
             SetValues(prompt, caption, "");
         }
 
-        public TextPromptForm(string prompt, string caption, string defaultValue)
+        public TextPromptDialog(string prompt, string caption, string defaultValue)
         {
             InitializeComponent();
             SetValues(prompt, caption, defaultValue);

@@ -1,6 +1,6 @@
 ﻿namespace swxben.Windows.Forms.Dialogs
 {
-    partial class DateTimePromptForm
+    partial class DateTimePromptDialog
     {
         /// <summary>
         /// Required designer variable.
@@ -108,7 +108,7 @@
             this.InputDateTimePicker.TabIndex = 2;
             this.InputDateTimePicker.ValueChanged += new System.EventHandler(this.InputDateTimePicker_ValueChanged);
             // 
-            // DateTimePromptForm
+            // DateTimePromptDialog
             // 
             this.AcceptButton = this.OkButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -118,10 +118,11 @@
             this.ClientSize = new System.Drawing.Size(441, 88);
             this.ControlBox = false;
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Name = "DateTimePromptForm";
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Name = "DateTimePromptDialog";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "DateTimePromptForm";
+            this.Text = "DateTimePromptDialog";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.flowLayoutPanel1.ResumeLayout(false);

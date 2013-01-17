@@ -43,33 +43,33 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Dialogs\DateTimePromptForm.cs">
+    <Compile Include="Dialogs\DateTimePromptDialog.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Dialogs\DateTimePromptForm.Designer.cs">
-      <DependentUpon>DateTimePromptForm.cs</DependentUpon>
+    <Compile Include="Dialogs\DateTimePromptDialog.Designer.cs">
+      <DependentUpon>DateTimePromptDialog.cs</DependentUpon>
     </Compile>
-    <Compile Include="Dialogs\GenericListSearchForm.cs">
+    <Compile Include="Dialogs\GenericListSearchDialog.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Dialogs\GenericListSearchForm.Designer.cs">
-      <DependentUpon>GenericListSearchForm.cs</DependentUpon>
+    <Compile Include="Dialogs\GenericListSearchDialog.Designer.cs">
+      <DependentUpon>GenericListSearchDialog.cs</DependentUpon>
     </Compile>
     <Compile Include="Dialogs\IDateTimePrompt.cs" />
     <Compile Include="Dialogs\IGenericListSearch.cs" />
     <Compile Include="Dialogs\IStringListSearch.cs" />
     <Compile Include="Dialogs\ITextPrompt.cs" />
-    <Compile Include="Dialogs\StringListSearchForm.cs">
+    <Compile Include="Dialogs\StringListSearchDialog.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Dialogs\StringListSearchForm.Designer.cs">
-      <DependentUpon>StringListSearchForm.cs</DependentUpon>
+    <Compile Include="Dialogs\StringListSearchDialog.Designer.cs">
+      <DependentUpon>StringListSearchDialog.cs</DependentUpon>
     </Compile>
-    <Compile Include="Dialogs\TextPromptForm.cs">
+    <Compile Include="Dialogs\TextPromptDialog.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Dialogs\TextPromptForm.Designer.cs">
-      <DependentUpon>TextPromptForm.cs</DependentUpon>
+    <Compile Include="Dialogs\TextPromptDialog.Designer.cs">
+      <DependentUpon>TextPromptDialog.cs</DependentUpon>
     </Compile>
     <Compile Include="FormKeyboardShortcutProvider.cs" />
     <Compile Include="ListViewItemTextComparer.cs" />
@@ -77,17 +77,17 @@
     <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Dialogs\DateTimePromptForm.resx">
-      <DependentUpon>DateTimePromptForm.cs</DependentUpon>
+    <EmbeddedResource Include="Dialogs\DateTimePromptDialog.resx">
+      <DependentUpon>DateTimePromptDialog.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Dialogs\GenericListSearchForm.resx">
-      <DependentUpon>GenericListSearchForm.cs</DependentUpon>
+    <EmbeddedResource Include="Dialogs\GenericListSearchDialog.resx">
+      <DependentUpon>GenericListSearchDialog.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Dialogs\StringListSearchForm.resx">
-      <DependentUpon>StringListSearchForm.cs</DependentUpon>
+    <EmbeddedResource Include="Dialogs\StringListSearchDialog.resx">
+      <DependentUpon>StringListSearchDialog.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Dialogs\TextPromptForm.resx">
-      <DependentUpon>TextPromptForm.cs</DependentUpon>
+    <EmbeddedResource Include="Dialogs\TextPromptDialog.resx">
+      <DependentUpon>TextPromptDialog.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

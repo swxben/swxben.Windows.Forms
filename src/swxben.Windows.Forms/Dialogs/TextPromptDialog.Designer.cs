@@ -1,6 +1,6 @@
 ﻿namespace swxben.Windows.Forms.Dialogs
 {
-    partial class TextPromptForm
+    partial class TextPromptDialog
     {
         /// <summary>
         /// Required designer variable.
@@ -108,7 +108,7 @@
             this.OkButton.UseVisualStyleBackColor = true;
             this.OkButton.Click += new System.EventHandler(this.OkButton_Click);
             // 
-            // TextPromptForm
+            // TextPromptDialog
             // 
             this.AcceptButton = this.OkButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -118,10 +118,10 @@
             this.ClientSize = new System.Drawing.Size(441, 88);
             this.ControlBox = false;
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Name = "TextPromptForm";
+            this.Name = "TextPromptDialog";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "TextPromptForm";
+            this.Text = "TextPromptDialog";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.flowLayoutPanel1.ResumeLayout(false);

@@ -38,19 +38,20 @@ namespace swxben.Windows.Forms.Dialogs
             InitializeComponent();
         }
 
-        public void SetValues(IEnumerable<T> source, Func<T, string> displayCallback)
+        public GenericListSearchForm(string title, IEnumerable<T> source, Func<T, string> displayCallback)
         {
+            InitializeComponent();
+            SetValues(title, source, displayCallback);
+        }
+
+        public void SetValues(string title, IEnumerable<T> source, Func<T, string> displayCallback)
+        {
+            Text = title;
             _source = source;
             _displayCallback = displayCallback;
 
             LoadControl();
             RefreshControl();
-        }
-
-        public GenericListSearchForm(IEnumerable<T> source, Func<T, string> displayCallback)
-        {
-            InitializeComponent();
-            SetValues(source, displayCallback);
         }
 
         void LoadControl()

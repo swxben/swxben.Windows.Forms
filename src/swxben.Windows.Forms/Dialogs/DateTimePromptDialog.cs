@@ -3,7 +3,7 @@ using System.Windows.Forms;
 
 namespace swxben.Windows.Forms.Dialogs
 {
-    public partial class DateTimePromptForm : Form, IDateTimePrompt
+    public partial class DateTimePromptDialog : Form, IDateTimePrompt
     {
         public DateTime Value
         {
@@ -16,25 +16,25 @@ namespace swxben.Windows.Forms.Dialogs
             InputDateTimePicker.MinDate = minDate;
         }
 
-        public DateTimePromptForm()
+        public DateTimePromptDialog()
         {
             InitializeComponent();
             SetValues("Enter a value:", "", DateTime.Now.Date);
         }
 
-        public DateTimePromptForm(string prompt)
+        public DateTimePromptDialog(string prompt)
         {
             InitializeComponent();
             SetValues(prompt, "", DateTime.Now.Date);
         }
 
-        public DateTimePromptForm(string prompt, string caption)
+        public DateTimePromptDialog(string prompt, string caption)
         {
             InitializeComponent();
             SetValues(prompt, caption, DateTime.Now.Date);
         }
 
-        public DateTimePromptForm(string prompt, string caption, DateTime defaultValue)
+        public DateTimePromptDialog(string prompt, string caption, DateTime defaultValue)
         {
             InitializeComponent();
             SetValues(prompt, caption, defaultValue);

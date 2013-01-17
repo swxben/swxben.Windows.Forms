@@ -6,7 +6,7 @@ namespace swxben.Windows.Forms.Dialogs
     public interface IStringListSearch
     {
         string SelectedItem { get; set; }
-        void SetSource(IEnumerable<string> source);
+        void SetValues(string title, IEnumerable<string> source);
         DialogResult ShowDialog();
     }
 }
