@@ -6,12 +6,13 @@ using System.Windows.Forms;
 
 namespace swxben.Windows.Forms.Dialogs
 {
-    public partial class GenericListSearchForm<T> : Form
+    public partial class GenericListSearchForm<T> : Form, IGenericListSearch<T>
     {
-        readonly IEnumerable<T> _source;
         private const string FILTER_PROMPT = "Search...";
+
+        IEnumerable<T> _source;
         bool _loading;
-        readonly Func<T, string> _displayCallback;
+        Func<T, string> _displayCallback;
 
         public T SelectedItem
         {
@@ -32,15 +33,24 @@ namespace swxben.Windows.Forms.Dialogs
             }
         }
 
-        public GenericListSearchForm(IEnumerable<T> source, Func<T, string> displayCallback)
+        public GenericListSearchForm()
         {
             InitializeComponent();
+        }
 
+        public void SetValues(IEnumerable<T> source, Func<T, string> displayCallback)
+        {
             _source = source;
             _displayCallback = displayCallback;
 
             LoadControl();
             RefreshControl();
+        }
+
+        public GenericListSearchForm(IEnumerable<T> source, Func<T, string> displayCallback)
+        {
+            InitializeComponent();
+            SetValues(source, displayCallback);
         }
 
         void LoadControl()

@@ -6,9 +6,9 @@ using System.Windows.Forms;
 
 namespace swxben.Windows.Forms.Dialogs
 {
-    public partial class StringListSearchForm : Form
+    public partial class StringListSearchForm : Form, IStringListSearch
     {
-        readonly IEnumerable<string> _source;
+        IEnumerable<string> _source;
         private const string FILTER_PROMPT = "Search...";
         bool _loading;
 
@@ -34,7 +34,11 @@ namespace swxben.Windows.Forms.Dialogs
         public StringListSearchForm(IEnumerable<string> source)
         {
             InitializeComponent();
+            SetSource(source);
+        }
 
+        public void SetSource(IEnumerable<string> source)
+        {
             _source = source;
 
             LoadControl();

@@ -3,7 +3,7 @@ using System.Windows.Forms;
 
 namespace swxben.Windows.Forms.Dialogs
 {
-    public partial class TextPromptForm : Form
+    public partial class TextPromptForm : Form, ITextPrompt
     {
         public string Value
         {
@@ -35,7 +35,7 @@ namespace swxben.Windows.Forms.Dialogs
             SetValues(prompt, caption, defaultValue);
         }
 
-        void SetValues(string prompt, string caption, string defaultValue)
+        public void SetValues(string prompt, string caption, string defaultValue)
         {
             PromptLabel.Text = prompt;
             Text = caption;

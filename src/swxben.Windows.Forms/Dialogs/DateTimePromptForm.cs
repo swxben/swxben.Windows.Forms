@@ -3,7 +3,7 @@ using System.Windows.Forms;
 
 namespace swxben.Windows.Forms.Dialogs
 {
-    public partial class DateTimePromptForm : Form
+    public partial class DateTimePromptForm : Form, IDateTimePrompt
     {
         public DateTime Value
         {
@@ -40,7 +40,7 @@ namespace swxben.Windows.Forms.Dialogs
             SetValues(prompt, caption, defaultValue);
         }
 
-        void SetValues(string prompt, string caption, DateTime defaultValue)
+        public void SetValues(string prompt, string caption, DateTime defaultValue)
         {
             PromptLabel.Text = prompt;
             Text = caption;

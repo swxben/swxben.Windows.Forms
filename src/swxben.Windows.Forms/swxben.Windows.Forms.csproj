@@ -55,6 +55,10 @@
     <Compile Include="Dialogs\GenericListSearchForm.Designer.cs">
       <DependentUpon>GenericListSearchForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Dialogs\IDateTimePrompt.cs" />
+    <Compile Include="Dialogs\IGenericListSearch.cs" />
+    <Compile Include="Dialogs\IStringListSearch.cs" />
+    <Compile Include="Dialogs\ITextPrompt.cs" />
     <Compile Include="Dialogs\StringListSearchForm.cs">
       <SubType>Form</SubType>
     </Compile>
