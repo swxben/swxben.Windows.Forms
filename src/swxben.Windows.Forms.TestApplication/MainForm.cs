@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
@@ -52,6 +53,23 @@ namespace swxben.Windows.Forms.TestApplication
         {
             ITextPrompt prompt = new TextPromptDialog("What is the driver's name:", "Driver name", "Jane");
             MessageBox.Show(prompt.ShowDialog() != DialogResult.OK ? "Cancelled" : string.Format("Name is {0}", prompt.Value));
+        }
+
+        private void GenericDetailedListSearchButton_Click(object sender, EventArgs e)
+        {
+            IGenericDetailedListSearch<Vampire> search = new GenericDetailedListSearchDialog<Vampire>();
+            var vampires = new[]
+                {
+                    new Vampire {Name = "Bill", Age = 172},
+                    new Vampire {Name = "Jessica", Age = 17},
+                    new Vampire {Name = "Erik", Age = 1204}
+                };
+            search.SetValues(
+                "Select your favourite vampire", 
+                vampires, 
+                new[]{"Name", "Age"}, 
+                vampire => new[] { vampire.Name, vampire.Age.ToString(CultureInfo.InvariantCulture) });
+            MessageBox.Show(search.ShowDialog() != DialogResult.OK ? "Cancelled" : string.Format("Selected {0}", search.SelectedItem.Name));
         }
     }
 }

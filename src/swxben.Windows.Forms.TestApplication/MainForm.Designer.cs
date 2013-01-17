@@ -33,6 +33,7 @@
             this.GenericListSearchButton = new System.Windows.Forms.Button();
             this.StringListSearchButton = new System.Windows.Forms.Button();
             this.TextPromptButton = new System.Windows.Forms.Button();
+            this.GenericDetailedListSearchButton = new System.Windows.Forms.Button();
             this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -42,6 +43,7 @@
             this.flowLayoutPanel1.Controls.Add(this.GenericListSearchButton);
             this.flowLayoutPanel1.Controls.Add(this.StringListSearchButton);
             this.flowLayoutPanel1.Controls.Add(this.TextPromptButton);
+            this.flowLayoutPanel1.Controls.Add(this.GenericDetailedListSearchButton);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
@@ -92,6 +94,17 @@
             this.TextPromptButton.UseVisualStyleBackColor = true;
             this.TextPromptButton.Click += new System.EventHandler(this.TextPromptButton_Click);
             // 
+            // GenericDetailedListSearchButton
+            // 
+            this.GenericDetailedListSearchButton.AutoSize = true;
+            this.GenericDetailedListSearchButton.Location = new System.Drawing.Point(3, 61);
+            this.GenericDetailedListSearchButton.Name = "GenericDetailedListSearchButton";
+            this.GenericDetailedListSearchButton.Size = new System.Drawing.Size(143, 23);
+            this.GenericDetailedListSearchButton.TabIndex = 4;
+            this.GenericDetailedListSearchButton.Text = "GenericDetailedListSearch";
+            this.GenericDetailedListSearchButton.UseVisualStyleBackColor = true;
+            this.GenericDetailedListSearchButton.Click += new System.EventHandler(this.GenericDetailedListSearchButton_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -113,6 +126,7 @@
         private System.Windows.Forms.Button GenericListSearchButton;
         private System.Windows.Forms.Button StringListSearchButton;
         private System.Windows.Forms.Button TextPromptButton;
+        private System.Windows.Forms.Button GenericDetailedListSearchButton;
 
     }
 }

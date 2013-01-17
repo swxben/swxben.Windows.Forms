@@ -43,6 +43,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dialogs\IGenericDetailedListSearch.cs" />
+    <Compile Include="Dialogs\GenericDetailedListSearchDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\GenericDetailedListSearchDialog.Designer.cs">
+      <DependentUpon>GenericDetailedListSearchDialog.cs</DependentUpon>
+    </Compile>
     <Compile Include="Dialogs\DateTimePromptDialog.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +84,9 @@
     <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Dialogs\GenericDetailedListSearchDialog.resx">
+      <DependentUpon>GenericDetailedListSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Dialogs\DateTimePromptDialog.resx">
       <DependentUpon>DateTimePromptDialog.cs</DependentUpon>
     </EmbeddedResource>
