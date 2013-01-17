@@ -9,5 +9,6 @@ namespace swxben.Windows.Forms.Dialogs
         T SelectedItem { get; set; }
         void SetValues(string title, IEnumerable<T> source, IEnumerable<string> columns, Func<T, IEnumerable<string>> displayCallback);
         DialogResult ShowDialog();
+        void FixWidth();
     }
 }

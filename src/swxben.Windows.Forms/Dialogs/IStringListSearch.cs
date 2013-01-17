@@ -8,5 +8,7 @@ namespace swxben.Windows.Forms.Dialogs
         string SelectedItem { get; set; }
         void SetValues(string title, IEnumerable<string> source);
         DialogResult ShowDialog();
+        void FixWidth();
+
     }
 }

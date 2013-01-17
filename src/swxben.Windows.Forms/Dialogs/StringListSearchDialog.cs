@@ -79,6 +79,12 @@ namespace swxben.Windows.Forms.Dialogs
             foreach (ColumnHeader column in StringListView.Columns) column.Width = -2;
         }
 
+        public void FixWidth()
+        {
+            var newWidth = Width + StringListView.Columns.Cast<ColumnHeader>().Sum(c => c.Width) - StringListView.Width + 30;
+            if (Width < newWidth) Width = newWidth;
+        }
+
         private void SearchTextBox_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter || e.KeyCode == Keys.Return)

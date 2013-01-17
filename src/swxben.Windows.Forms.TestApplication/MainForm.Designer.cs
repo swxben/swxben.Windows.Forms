@@ -34,6 +34,7 @@
             this.StringListSearchButton = new System.Windows.Forms.Button();
             this.TextPromptButton = new System.Windows.Forms.Button();
             this.GenericDetailedListSearchButton = new System.Windows.Forms.Button();
+            this.GenericDetailedListSearchFixWidthButton = new System.Windows.Forms.Button();
             this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -44,6 +45,7 @@
             this.flowLayoutPanel1.Controls.Add(this.StringListSearchButton);
             this.flowLayoutPanel1.Controls.Add(this.TextPromptButton);
             this.flowLayoutPanel1.Controls.Add(this.GenericDetailedListSearchButton);
+            this.flowLayoutPanel1.Controls.Add(this.GenericDetailedListSearchFixWidthButton);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
@@ -105,6 +107,17 @@
             this.GenericDetailedListSearchButton.UseVisualStyleBackColor = true;
             this.GenericDetailedListSearchButton.Click += new System.EventHandler(this.GenericDetailedListSearchButton_Click);
             // 
+            // GenericDetailedListSearchFixWidthButton
+            // 
+            this.GenericDetailedListSearchFixWidthButton.AutoSize = true;
+            this.GenericDetailedListSearchFixWidthButton.Location = new System.Drawing.Point(3, 90);
+            this.GenericDetailedListSearchFixWidthButton.Name = "GenericDetailedListSearchFixWidthButton";
+            this.GenericDetailedListSearchFixWidthButton.Size = new System.Drawing.Size(193, 23);
+            this.GenericDetailedListSearchFixWidthButton.TabIndex = 5;
+            this.GenericDetailedListSearchFixWidthButton.Text = "GenericDetailedListSearch - Fix width";
+            this.GenericDetailedListSearchFixWidthButton.UseVisualStyleBackColor = true;
+            this.GenericDetailedListSearchFixWidthButton.Click += new System.EventHandler(this.GenericDetailedListSearchFixWidthButton_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -127,6 +140,7 @@
         private System.Windows.Forms.Button StringListSearchButton;
         private System.Windows.Forms.Button TextPromptButton;
         private System.Windows.Forms.Button GenericDetailedListSearchButton;
+        private System.Windows.Forms.Button GenericDetailedListSearchFixWidthButton;
 
     }
 }

@@ -69,7 +69,34 @@ namespace swxben.Windows.Forms.TestApplication
                 vampires, 
                 new[]{"Name", "Age"}, 
                 vampire => new[] { vampire.Name, vampire.Age.ToString(CultureInfo.InvariantCulture) });
+            search.FixWidth();
             MessageBox.Show(search.ShowDialog() != DialogResult.OK ? "Cancelled" : string.Format("Selected {0}", search.SelectedItem.Name));
+        }
+
+        class ItemRate
+        {
+            public string Category;
+            public string Code;
+            public string Description;
+        }
+        private void GenericDetailedListSearchFixWidthButton_Click(object sender, EventArgs e)
+        {
+            IGenericDetailedListSearch<ItemRate> search = new GenericDetailedListSearchDialog<ItemRate>();
+            var items = new[]
+                {
+                    new ItemRate {Category="Whitegoods", Code = "WG_KITCHEN_REFRIDGERATOR", Description = "Refridgerator" },
+                    new ItemRate {Category="Smallgoods", Code = "DELI_SALAMI", Description = "Salami" },
+                    new ItemRate {Category="Smallclothes", Code = "CLOTHING_UNDERWEAR_BOXERS", Description = "Nooo, briefs." }
+                };
+            search.SetValues(
+                "Select an item",
+                items,
+                new[] {"Category", "Code", "Description"},
+                i => new[] {i.Category, i.Code, i.Description});
+            search.FixWidth();
+            search.FixWidth();
+            search.FixWidth();
+            MessageBox.Show(search.ShowDialog() != DialogResult.OK ? "Cancelled" : string.Format("Selected {0}", search.SelectedItem.Code));
         }
     }
 }

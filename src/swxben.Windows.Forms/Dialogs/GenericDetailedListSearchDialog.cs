@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
+using System.Linq;
 
 namespace swxben.Windows.Forms.Dialogs
 {
@@ -95,7 +96,13 @@ namespace swxben.Windows.Forms.Dialogs
                     }).ToArray());
             GenericListView.EndUpdate();
 
-            foreach (ColumnHeader column in GenericListView.Columns) column.Width = -2;
+            GenericListView.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
+        }
+
+        public void FixWidth()
+        {
+            var newWidth = Width + GenericListView.Columns.Cast<ColumnHeader>().Sum(c => c.Width) - GenericListView.Width + 30;
+            if (Width < newWidth) Width = newWidth;
         }
 
         private void SearchTextBox_KeyDown(object sender, KeyEventArgs e)
