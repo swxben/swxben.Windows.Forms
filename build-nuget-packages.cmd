@@ -1,5 +1,6 @@
 @echo off
 echo *** Make sure you have updated the assembly and nuspec to match the release version! ***
+pause
 
 call "%VS100COMNTOOLS%vsvars32.bat"
 mkdir log\
