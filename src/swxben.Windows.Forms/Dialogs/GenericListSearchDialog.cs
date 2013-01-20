@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
+using swxben.Windows.Forms.Controls;
 
 namespace swxben.Windows.Forms.Dialogs
 {
@@ -59,7 +60,7 @@ namespace swxben.Windows.Forms.Dialogs
             _loading = true;
             ListViewItemTextComparer.AssignTo(GenericListView);
             Filter("");
-            SearchTextBox.Text = FILTER_PROMPT;
+            SearchTextBox.SetWatermark(FILTER_PROMPT);
             _loading = false;
         }
 
@@ -71,7 +72,6 @@ namespace swxben.Windows.Forms.Dialogs
 
         void RefreshControl()
         {
-            SearchTextBox.ForeColor = (SearchTextBox.Text == FILTER_PROMPT) ? Color.FromKnownColor(KnownColor.GrayText) : Color.FromKnownColor(KnownColor.ControlText);
             SelectItemButton.Enabled = GenericListView.SelectedItems.Count != 0;
         }
 
@@ -121,24 +121,6 @@ namespace swxben.Windows.Forms.Dialogs
 
         private void StringListView_SelectedIndexChanged(object sender, EventArgs e)
         {
-            RefreshControl();
-        }
-
-        private void SearchTextBox_Enter(object sender, EventArgs e)
-        {
-            if (SearchTextBox.Text != FILTER_PROMPT) return;
-            _loading = true;
-            SearchTextBox.Text = "";
-            _loading = false;
-            RefreshControl();
-        }
-
-        private void SearchTextBox_Leave(object sender, EventArgs e)
-        {
-            if (SearchTextBox.Text != "") return;
-            _loading = true;
-            SearchTextBox.Text = FILTER_PROMPT;
-            _loading = false;
             RefreshControl();
         }
 

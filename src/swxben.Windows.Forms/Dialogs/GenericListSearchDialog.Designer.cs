@@ -64,9 +64,7 @@
             this.SearchTextBox.Size = new System.Drawing.Size(327, 20);
             this.SearchTextBox.TabIndex = 0;
             this.SearchTextBox.TextChanged += new System.EventHandler(this.SearchTextBox_TextChanged);
-            this.SearchTextBox.Enter += new System.EventHandler(this.SearchTextBox_Enter);
             this.SearchTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.SearchTextBox_KeyDown);
-            this.SearchTextBox.Leave += new System.EventHandler(this.SearchTextBox_Leave);
             // 
             // flowLayoutPanel1
             // 
@@ -122,7 +120,7 @@
             // 
             this.columnHeader1.Text = "Items";
             // 
-            // GenericListSearchForm
+            // GenericListSearchDialog
             // 
             this.AcceptButton = this.SelectItemButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
