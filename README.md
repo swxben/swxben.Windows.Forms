@@ -13,7 +13,10 @@ Install via [NuGet](http://nuget.org/packages/swxben.Windows.Forms), either in V
 Live, hopefully working examples are in the test application. All of the forms can be opened using `ShowDialog()` which returns either `DialogResult.OK` or `DialogResult.Cancel`. Each of the dialogs implements a public interface allowing for use with a DI container and mocking in tests.
 
 
-### DateTimePromptDialog
+### swxben.Windows.Forms.Dialogs
+
+
+#### DateTimePromptDialog
 
 Select a date.
 
@@ -26,7 +29,7 @@ Select a date.
     prompt.ShowDialog();	// == DialogResult.OK or DialogResult.Cancel
 
 
-### GenericListSearchDialog
+#### GenericListSearchDialog
 
 Generic-typed item selection with string search.
 
@@ -40,7 +43,7 @@ Generic-typed item selection with string search.
 `GenericListSearchDialog` has a `FixWidth()` method which increases the width of the dialog based on the width of the items in the list.
 
 
-### GenericDetailedListSearchDialog
+#### GenericDetailedListSearchDialog
 
 Similar to `GenericListSearchDialog` but receives an array of column names, and the display callback returns a corresponding array of column values.
 
@@ -58,7 +61,7 @@ Similar to `GenericListSearchDialog` but receives an array of column names, and 
 `GenericDetailedListSearchDialog` has a `FixWidth()` method which increases the width of the dialog based on the width of the items in the list.
 
 
-### StringListSearchDialog
+#### StringListSearchDialog
 
 Search through a list of strings.
 
@@ -69,13 +72,24 @@ Search through a list of strings.
 `StringListSearchDialog` has a `FixWidth()` method which increases the width of the dialog based on the width of the items in the list.
 
 
-### TextPromptDialog
+#### TextPromptDialog
 
 Enter a text value.
 
 	var prompt = new TextPromptDialog("What is the driver's name:", "Driver name", "Jane");
 	prompt.ShowDialog();
 	// prompt.Value is the entered string
+
+
+### swxben.Windows.Forms.Controls
+
+#### WatermarkedTextBoxExtension
+
+Support for watermarking a textbox. Based on a [pastebin](http://pastebin.com/iFzanuC2) from [Jack](http://stackoverflow.com/a/9303203/149259).
+
+    using swxben.Windows.Forms.Controls;
+    //...
+    textBox.SetWatermark("Username");
 
 
 ## Contribute

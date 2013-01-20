@@ -1,12 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Globalization;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
+using swxben.Windows.Forms.Controls;
 using swxben.Windows.Forms.Dialogs;
 
 namespace swxben.Windows.Forms.TestApplication
@@ -16,12 +11,14 @@ namespace swxben.Windows.Forms.TestApplication
         public MainForm()
         {
             InitializeComponent();
+
+            WatermarkedTextBox.SetWatermark("Watermarked text box");
         }
 
         private void DateTimePromptButton_Click(object sender, EventArgs e)
         {
             IDateTimePrompt prompt = new DateTimePromptDialog();
-            prompt.SetValues("Select a date", "Date selection", new DateTime(2013,01,01));
+            prompt.SetValues("Select a date", "Date selection", new DateTime(2013, 01, 01));
             MessageBox.Show(prompt.ShowDialog() != DialogResult.OK ? "Cancelled" : string.Format("Selected {0}", prompt.Value));
         }
 
@@ -40,12 +37,12 @@ namespace swxben.Windows.Forms.TestApplication
                     new Vampire {Name = "Erik", Age = 1204}
                 };
             search.SetValues("Select your favourite vampire", vampires, vampire => vampire.Name);
-            MessageBox.Show(search.ShowDialog() != DialogResult.OK ? "Cancelled": string.Format("Selected {0}", search.SelectedItem.Name));
+            MessageBox.Show(search.ShowDialog() != DialogResult.OK ? "Cancelled" : string.Format("Selected {0}", search.SelectedItem.Name));
         }
 
         private void StringListSearchButton_Click(object sender, EventArgs e)
         {
-            IStringListSearch search= new StringListSearchDialog("Select a language", new[] { "C#", "C++", "Ruby", "Scala", "Javascript", "Java"});
+            IStringListSearch search = new StringListSearchDialog("Select a language", new[] { "C#", "C++", "Ruby", "Scala", "Javascript", "Java" });
             MessageBox.Show(search.ShowDialog() != DialogResult.OK ? "Cancelled" : string.Format("Selected {0}", search.SelectedItem));
         }
 
@@ -65,9 +62,9 @@ namespace swxben.Windows.Forms.TestApplication
                     new Vampire {Name = "Erik", Age = 1204}
                 };
             search.SetValues(
-                "Select your favourite vampire", 
-                vampires, 
-                new[]{"Name", "Age"}, 
+                "Select your favourite vampire",
+                vampires,
+                new[] { "Name", "Age" },
                 vampire => new[] { vampire.Name, vampire.Age.ToString(CultureInfo.InvariantCulture) });
             search.FixWidth();
             MessageBox.Show(search.ShowDialog() != DialogResult.OK ? "Cancelled" : string.Format("Selected {0}", search.SelectedItem.Name));
@@ -91,8 +88,8 @@ namespace swxben.Windows.Forms.TestApplication
             search.SetValues(
                 "Select an item",
                 items,
-                new[] {"Category", "Code", "Description"},
-                i => new[] {i.Category, i.Code, i.Description});
+                new[] { "Category", "Code", "Description" },
+                i => new[] { i.Category, i.Code, i.Description });
             search.FixWidth();
             search.FixWidth();
             search.FixWidth();

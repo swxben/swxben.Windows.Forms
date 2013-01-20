@@ -35,6 +35,7 @@
             this.TextPromptButton = new System.Windows.Forms.Button();
             this.GenericDetailedListSearchButton = new System.Windows.Forms.Button();
             this.GenericDetailedListSearchFixWidthButton = new System.Windows.Forms.Button();
+            this.WatermarkedTextBox = new System.Windows.Forms.TextBox();
             this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -46,10 +47,11 @@
             this.flowLayoutPanel1.Controls.Add(this.TextPromptButton);
             this.flowLayoutPanel1.Controls.Add(this.GenericDetailedListSearchButton);
             this.flowLayoutPanel1.Controls.Add(this.GenericDetailedListSearchFixWidthButton);
+            this.flowLayoutPanel1.Controls.Add(this.WatermarkedTextBox);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(284, 261);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(391, 261);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
             // DateTimePromptButton
@@ -77,7 +79,7 @@
             // StringListSearchButton
             // 
             this.StringListSearchButton.AutoSize = true;
-            this.StringListSearchButton.Location = new System.Drawing.Point(3, 32);
+            this.StringListSearchButton.Location = new System.Drawing.Point(215, 3);
             this.StringListSearchButton.Name = "StringListSearchButton";
             this.StringListSearchButton.Size = new System.Drawing.Size(94, 23);
             this.StringListSearchButton.TabIndex = 2;
@@ -88,7 +90,7 @@
             // TextPromptButton
             // 
             this.TextPromptButton.AutoSize = true;
-            this.TextPromptButton.Location = new System.Drawing.Point(103, 32);
+            this.TextPromptButton.Location = new System.Drawing.Point(3, 32);
             this.TextPromptButton.Name = "TextPromptButton";
             this.TextPromptButton.Size = new System.Drawing.Size(75, 23);
             this.TextPromptButton.TabIndex = 3;
@@ -99,7 +101,7 @@
             // GenericDetailedListSearchButton
             // 
             this.GenericDetailedListSearchButton.AutoSize = true;
-            this.GenericDetailedListSearchButton.Location = new System.Drawing.Point(3, 61);
+            this.GenericDetailedListSearchButton.Location = new System.Drawing.Point(84, 32);
             this.GenericDetailedListSearchButton.Name = "GenericDetailedListSearchButton";
             this.GenericDetailedListSearchButton.Size = new System.Drawing.Size(143, 23);
             this.GenericDetailedListSearchButton.TabIndex = 4;
@@ -110,7 +112,7 @@
             // GenericDetailedListSearchFixWidthButton
             // 
             this.GenericDetailedListSearchFixWidthButton.AutoSize = true;
-            this.GenericDetailedListSearchFixWidthButton.Location = new System.Drawing.Point(3, 90);
+            this.GenericDetailedListSearchFixWidthButton.Location = new System.Drawing.Point(3, 61);
             this.GenericDetailedListSearchFixWidthButton.Name = "GenericDetailedListSearchFixWidthButton";
             this.GenericDetailedListSearchFixWidthButton.Size = new System.Drawing.Size(193, 23);
             this.GenericDetailedListSearchFixWidthButton.TabIndex = 5;
@@ -118,11 +120,18 @@
             this.GenericDetailedListSearchFixWidthButton.UseVisualStyleBackColor = true;
             this.GenericDetailedListSearchFixWidthButton.Click += new System.EventHandler(this.GenericDetailedListSearchFixWidthButton_Click);
             // 
+            // WatermarkedTextBox
+            // 
+            this.WatermarkedTextBox.Location = new System.Drawing.Point(202, 61);
+            this.WatermarkedTextBox.Name = "WatermarkedTextBox";
+            this.WatermarkedTextBox.Size = new System.Drawing.Size(167, 20);
+            this.WatermarkedTextBox.TabIndex = 6;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.ClientSize = new System.Drawing.Size(391, 261);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Name = "MainForm";
             this.Text = "MainForm";
@@ -141,6 +150,7 @@
         private System.Windows.Forms.Button TextPromptButton;
         private System.Windows.Forms.Button GenericDetailedListSearchButton;
         private System.Windows.Forms.Button GenericDetailedListSearchFixWidthButton;
+        private System.Windows.Forms.TextBox WatermarkedTextBox;
 
     }
 }
