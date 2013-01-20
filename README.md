@@ -83,7 +83,17 @@ Enter a text value.
 
 ### swxben.Windows.Forms.Controls
 
-#### WatermarkedTextBoxExtension
+
+#### ListView smart column resize (ListViewAutoResizeColumnsSmartExtension)
+
+`ListView.AutoResizeColumns()` will only resize by column content or header not by the greater of the two which can cause issues with visibility. `ListViewAutoResizeColumnsSmartExtension` sets the width of each column to the larger size which causes the nicer resize behaviour. The effect is the same as double-clicking the column resize region.
+
+    using swxben.Windows.Forms.Controls;
+    //...
+    listView.AutoResizeColumnsSmart();
+
+
+#### TextBox watermarks (TextBoxWatermarkExtension)
 
 Support for watermarking a textbox. Based on a [pastebin](http://pastebin.com/iFzanuC2) from [Jack](http://stackoverflow.com/a/9303203/149259).
 

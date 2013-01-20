@@ -77,7 +77,7 @@ namespace swxben.Windows.Forms.Dialogs
             StringListView.Items.AddRange(matches.Select(s => new ListViewItem(s)).ToArray());
             StringListView.EndUpdate();
 
-            foreach (ColumnHeader column in StringListView.Columns) column.Width = -2;
+            StringListView.AutoResizeColumnsSmart();
         }
 
         public void FixWidth()

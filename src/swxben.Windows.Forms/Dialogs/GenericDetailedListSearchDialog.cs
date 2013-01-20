@@ -95,7 +95,7 @@ namespace swxben.Windows.Forms.Dialogs
                     }).ToArray());
             GenericListView.EndUpdate();
 
-            GenericListView.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
+            GenericListView.AutoResizeColumnsSmart();
         }
 
         public void FixWidth()

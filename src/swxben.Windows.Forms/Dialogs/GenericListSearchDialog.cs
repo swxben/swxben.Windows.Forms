@@ -85,7 +85,7 @@ namespace swxben.Windows.Forms.Dialogs
                 matches.Select(s => new ListViewItem { Text = _displayCallback(s), Tag = s }).ToArray());
             GenericListView.EndUpdate();
 
-            GenericListView.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
+            GenericListView.AutoResizeColumnsSmart();
         }
 
         public void FixWidth()

@@ -43,7 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controls\WatermarkedTextBoxExtension.cs" />
+    <Compile Include="Controls\ListViewAutoResizeColumnsSmartExtension.cs" />
+    <Compile Include="Controls\TextBoxWatermarkExtension.cs" />
     <Compile Include="Dialogs\IGenericDetailedListSearch.cs" />
     <Compile Include="Dialogs\GenericDetailedListSearchDialog.cs">
       <SubType>Form</SubType>
