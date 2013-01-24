@@ -2,10 +2,10 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>swxben.Windows.Forms</id>
-    <version>1.4.0</version>
+    <version>1.4.1</version>
     <title>swxben.Windows.Forms</title>
-    <authors>Software By Ben, Ben Scott</authors>
-    <owners>Software by Ben, Ben Scott</owners>
+    <authors>Software By Ben, Ben Scott, swxben, belfryimages</authors>
+    <owners>Software By Ben, Ben Scott, swxben, belfryimages</owners>
     <licenseUrl>http://creativecommons.org/licenses/by-sa/3.0/</licenseUrl>
     <projectUrl>https://github.com/swxben/swxben.Windows.Forms</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
