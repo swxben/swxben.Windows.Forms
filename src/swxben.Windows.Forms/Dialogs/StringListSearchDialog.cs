@@ -77,6 +77,7 @@ namespace swxben.Windows.Forms.Dialogs
             StringListView.Items.AddRange(matches.Select(s => new ListViewItem(s)).ToArray());
             StringListView.EndUpdate();
 
+            StringListView.Items[0].Selected = StringListView.Items.Count > 0;
             StringListView.AutoResizeColumnsSmart();
         }
 
