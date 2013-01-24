@@ -86,7 +86,8 @@ namespace swxben.Windows.Forms.Dialogs
             GenericListView.EndUpdate();
 
             GenericListView.AutoResizeColumnsSmart();
-            GenericListView.Items[0].Selected = GenericListView.Items.Count > 0;
+            if (GenericListView.Items.Count > 0) GenericListView.Items[0].Selected = true;
+            RefreshControl();
         }
 
         public void FixWidth()
