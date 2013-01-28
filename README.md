@@ -29,6 +29,17 @@ Select a date.
     prompt.ShowDialog();	// == DialogResult.OK or DialogResult.Cancel
 
 
+#### ExceptionForm
+
+Quick & dirty display of an exception. Includes a detail drill-down dialog showing the stack trace with a convenient button to copy the details to the clipboard. Activate it via a static method to keep things simple.
+
+    ...
+    catch (Exception ex)
+    {
+        ExceptionForm.ShowException("The thing didn't do the thing", ex);
+    }
+
+
 #### GenericListSearchDialog
 
 Generic-typed item selection with string search.
