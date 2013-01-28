@@ -36,6 +36,7 @@
             this.GenericDetailedListSearchButton = new System.Windows.Forms.Button();
             this.GenericDetailedListSearchFixWidthButton = new System.Windows.Forms.Button();
             this.WatermarkedTextBox = new System.Windows.Forms.TextBox();
+            this.ExceptionFormButton = new System.Windows.Forms.Button();
             this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -48,6 +49,7 @@
             this.flowLayoutPanel1.Controls.Add(this.GenericDetailedListSearchButton);
             this.flowLayoutPanel1.Controls.Add(this.GenericDetailedListSearchFixWidthButton);
             this.flowLayoutPanel1.Controls.Add(this.WatermarkedTextBox);
+            this.flowLayoutPanel1.Controls.Add(this.ExceptionFormButton);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
@@ -127,6 +129,17 @@
             this.WatermarkedTextBox.Size = new System.Drawing.Size(167, 20);
             this.WatermarkedTextBox.TabIndex = 6;
             // 
+            // ExceptionFormButton
+            // 
+            this.ExceptionFormButton.AutoSize = true;
+            this.ExceptionFormButton.Location = new System.Drawing.Point(3, 90);
+            this.ExceptionFormButton.Name = "ExceptionFormButton";
+            this.ExceptionFormButton.Size = new System.Drawing.Size(87, 23);
+            this.ExceptionFormButton.TabIndex = 7;
+            this.ExceptionFormButton.Text = "ExceptionForm";
+            this.ExceptionFormButton.UseVisualStyleBackColor = true;
+            this.ExceptionFormButton.Click += new System.EventHandler(this.ExceptionFormButton_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -151,6 +164,7 @@
         private System.Windows.Forms.Button GenericDetailedListSearchButton;
         private System.Windows.Forms.Button GenericDetailedListSearchFixWidthButton;
         private System.Windows.Forms.TextBox WatermarkedTextBox;
+        private System.Windows.Forms.Button ExceptionFormButton;
 
     }
 }

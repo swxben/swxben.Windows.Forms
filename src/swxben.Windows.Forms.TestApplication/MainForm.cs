@@ -95,5 +95,11 @@ namespace swxben.Windows.Forms.TestApplication
             search.FixWidth();
             MessageBox.Show(search.ShowDialog() != DialogResult.OK ? "Cancelled" : string.Format("Selected {0}", search.SelectedItem.Code));
         }
+
+        private void ExceptionFormButton_Click(object sender, EventArgs e)
+        {
+            var exception = new ArgumentException("argument exception message", "parameter name", new Exception("inner exception"));
+            ExceptionForm.ShowException("message passed to exception form", exception);
+        }
     }
 }
