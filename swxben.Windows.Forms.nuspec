@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>swxben.Windows.Forms</id>
-    <version>1.5.0</version>
+    <version>1.6.0</version>
     <title>swxben.Windows.Forms</title>
     <authors>Software By Ben, Ben Scott, swxben, belfryimages</authors>
     <owners>Software By Ben, Ben Scott, swxben, belfryimages</owners>
@@ -11,7 +11,7 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>A small library of Winforms based dialogs and helpers</description>
     <summary>A small library of Winforms based dialogs and helpers</summary>
-    <releaseNotes>Exception / error message dialog</releaseNotes>
+    <releaseNotes>Sort dialog improvements</releaseNotes>
     <tags>forms winforms windows</tags>
   </metadata>
   <files>
