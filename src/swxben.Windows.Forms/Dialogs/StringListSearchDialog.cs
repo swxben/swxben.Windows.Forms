@@ -142,5 +142,10 @@ namespace swxben.Windows.Forms.Dialogs
         {
             SelectItem();
         }
+
+        public void Sort()
+        {
+            StringListView.Sort();
+        }
     }
 }
