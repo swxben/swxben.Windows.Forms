@@ -52,7 +52,7 @@ namespace swxben.Windows.Forms.Dialogs
             _loading = true;
             ListViewItemTextComparer.AssignTo(StringListView);
             Filter("");
-            SearchTextBox.SetWatermark( FILTER_PROMPT);
+            SearchTextBox.SetWatermark(FILTER_PROMPT);
             _loading = false;
         }
 

@@ -101,5 +101,12 @@ namespace swxben.Windows.Forms.TestApplication
             var exception = new ArgumentException("argument exception message", "parameter name", new Exception("inner exception"));
             ExceptionForm.ShowException("message passed to exception form", exception);
         }
+
+        private void CaseInsensitiveListOrderingButton_Click(object sender, EventArgs e)
+        {
+            IStringListSearch search = new StringListSearchDialog("Case insensitive list ordering", new[] { "AAA", "AAb", "AAD", "YYZ", "yYY", "aAc" });
+            // should be ordered AAA, AAb, aAc, AAD, yYY, YYZ
+            MessageBox.Show(search.ShowDialog() != DialogResult.OK ? "Cancelled" : string.Format("Selected {0}", search.SelectedItem));
+        }
     }
 }

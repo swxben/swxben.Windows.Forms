@@ -37,6 +37,7 @@
             this.GenericDetailedListSearchFixWidthButton = new System.Windows.Forms.Button();
             this.WatermarkedTextBox = new System.Windows.Forms.TextBox();
             this.ExceptionFormButton = new System.Windows.Forms.Button();
+            this.CaseInsensitiveListOrderingButton = new System.Windows.Forms.Button();
             this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,6 +51,7 @@
             this.flowLayoutPanel1.Controls.Add(this.GenericDetailedListSearchFixWidthButton);
             this.flowLayoutPanel1.Controls.Add(this.WatermarkedTextBox);
             this.flowLayoutPanel1.Controls.Add(this.ExceptionFormButton);
+            this.flowLayoutPanel1.Controls.Add(this.CaseInsensitiveListOrderingButton);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
@@ -140,6 +142,17 @@
             this.ExceptionFormButton.UseVisualStyleBackColor = true;
             this.ExceptionFormButton.Click += new System.EventHandler(this.ExceptionFormButton_Click);
             // 
+            // CaseInsensitiveListOrderingButton
+            // 
+            this.CaseInsensitiveListOrderingButton.AutoSize = true;
+            this.CaseInsensitiveListOrderingButton.Location = new System.Drawing.Point(96, 90);
+            this.CaseInsensitiveListOrderingButton.Name = "CaseInsensitiveListOrderingButton";
+            this.CaseInsensitiveListOrderingButton.Size = new System.Drawing.Size(149, 23);
+            this.CaseInsensitiveListOrderingButton.TabIndex = 8;
+            this.CaseInsensitiveListOrderingButton.Text = "Case insensitive list ordering";
+            this.CaseInsensitiveListOrderingButton.UseVisualStyleBackColor = true;
+            this.CaseInsensitiveListOrderingButton.Click += new System.EventHandler(this.CaseInsensitiveListOrderingButton_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -165,6 +178,7 @@
         private System.Windows.Forms.Button GenericDetailedListSearchFixWidthButton;
         private System.Windows.Forms.TextBox WatermarkedTextBox;
         private System.Windows.Forms.Button ExceptionFormButton;
+        private System.Windows.Forms.Button CaseInsensitiveListOrderingButton;
 
     }
 }
