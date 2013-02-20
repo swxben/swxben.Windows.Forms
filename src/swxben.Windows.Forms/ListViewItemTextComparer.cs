@@ -176,7 +176,7 @@ namespace swxben.Windows.Forms
 
         private static int CompareValues(ColumnFormat columnFormat, string xValue, string yValue, ListViewItem itemX, ListViewItem itemY)
         {
-            if (columnFormat == ColumnFormat.Text) return String.Compare(xValue, yValue, StringComparison.Ordinal);
+            if (columnFormat == ColumnFormat.Text) return String.Compare(xValue, yValue, StringComparison.OrdinalIgnoreCase);
             if (columnFormat == ColumnFormat.Date) return CompareDates(xValue, yValue);
             if (columnFormat == ColumnFormat.Numeric) return CompareNumeric(xValue, yValue);
             if (columnFormat == ColumnFormat.Currency) return CompareCurrency(xValue, yValue);
