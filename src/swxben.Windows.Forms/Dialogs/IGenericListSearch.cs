@@ -10,5 +10,6 @@ namespace swxben.Windows.Forms.Dialogs
         void SetValues(string title, IEnumerable<T> source, Func<T, string> displayCallback);
         DialogResult ShowDialog();
         void FixWidth();
+        void Sort();
     }
 }

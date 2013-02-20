@@ -83,6 +83,7 @@ namespace swxben.Windows.Forms.TestApplication
                 {
                     new ItemRate {Category="Whitegoods", Code = "WG_KITCHEN_REFRIDGERATOR", Description = "Refridgerator" },
                     new ItemRate {Category="Smallgoods", Code = "DELI_SALAMI", Description = "Salami" },
+                    new ItemRate {Category="Smallgoods", Code = "DELI_PASTRAMI", Description = "Pastrami" },
                     new ItemRate {Category="Smallclothes", Code = "CLOTHING_UNDERWEAR_BOXERS", Description = "Nooo, briefs." }
                 };
             search.SetValues(
@@ -105,7 +106,10 @@ namespace swxben.Windows.Forms.TestApplication
         private void CaseInsensitiveListOrderingButton_Click(object sender, EventArgs e)
         {
             IStringListSearch search = new StringListSearchDialog("Case insensitive list ordering", new[] { "AAA", "AAb", "AAD", "YYZ", "yYY", "aAc" });
+            search.Sort();
+
             // should be ordered AAA, AAb, aAc, AAD, yYY, YYZ
+
             MessageBox.Show(search.ShowDialog() != DialogResult.OK ? "Cancelled" : string.Format("Selected {0}", search.SelectedItem));
         }
     }
