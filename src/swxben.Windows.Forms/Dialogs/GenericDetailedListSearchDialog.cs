@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 using swxben.Windows.Forms.Controls;
@@ -157,6 +156,11 @@ namespace swxben.Windows.Forms.Dialogs
         private void SelectItemButton_Click(object sender, EventArgs e)
         {
             SelectItem();
+        }
+
+        public void Sort()
+        {
+            GenericListView.Sort();
         }
     }
 }
