@@ -7,5 +7,6 @@ namespace swxben.Windows.Forms.Dialogs
         string Value { get; set; }
         void SetValues(string prompt, string caption, string defaultValue);
         DialogResult ShowDialog();
+        void SetIsPasswordPrompt(bool isPasswordPrompt);
     }
 }
