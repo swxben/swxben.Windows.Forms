@@ -40,6 +40,7 @@ namespace swxben.Windows.Forms.Dialogs
             PromptLabel.Text = prompt;
             Text = caption;
             InputTextBox.Text = defaultValue;
+            SetIsPasswordPrompt(false);
         }
 
         private void InputTextBox_KeyDown(object sender, KeyEventArgs e)
@@ -61,6 +62,11 @@ namespace swxben.Windows.Forms.Dialogs
         {
             DialogResult = DialogResult.Cancel;
             Close();
+        }
+
+        public void SetIsPasswordPrompt(bool isPasswordPrompt)
+        {
+            InputTextBox.UseSystemPasswordChar = isPasswordPrompt;
         }
     }
 }

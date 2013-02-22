@@ -112,5 +112,15 @@ namespace swxben.Windows.Forms.TestApplication
 
             MessageBox.Show(search.ShowDialog() != DialogResult.OK ? "Cancelled" : string.Format("Selected {0}", search.SelectedItem));
         }
+
+        private void PasswordPromptButton_Click(object sender, EventArgs e)
+        {
+            var passwordPrompt = new TextPromptDialog("Enter a password:", "PASSWORD");
+            passwordPrompt.SetIsPasswordPrompt(true);
+            if (passwordPrompt.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                MessageBox.Show(string.Format("Password: {0}", passwordPrompt.Value));
+            }
+        }
     }
 }
