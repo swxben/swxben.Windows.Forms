@@ -91,6 +91,12 @@ Enter a text value.
 	prompt.ShowDialog();
 	// prompt.Value is the entered string
 
+Calling `prompt.SetIsPasswordPrompt(true)` makes the text input use the system password character for password entry:
+
+    var passwordPrompt = new TextPromptDialog("Enter your password:", "PASSWORD");
+    passwordPrompt.SetIsPasswordPrompt(true);
+
+
 
 ### swxben.Windows.Forms.Controls
 

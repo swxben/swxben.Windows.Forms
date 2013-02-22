@@ -38,6 +38,7 @@
             this.WatermarkedTextBox = new System.Windows.Forms.TextBox();
             this.ExceptionFormButton = new System.Windows.Forms.Button();
             this.CaseInsensitiveListOrderingButton = new System.Windows.Forms.Button();
+            this.PasswordPromptButton = new System.Windows.Forms.Button();
             this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,6 +53,7 @@
             this.flowLayoutPanel1.Controls.Add(this.WatermarkedTextBox);
             this.flowLayoutPanel1.Controls.Add(this.ExceptionFormButton);
             this.flowLayoutPanel1.Controls.Add(this.CaseInsensitiveListOrderingButton);
+            this.flowLayoutPanel1.Controls.Add(this.PasswordPromptButton);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
@@ -153,6 +155,17 @@
             this.CaseInsensitiveListOrderingButton.UseVisualStyleBackColor = true;
             this.CaseInsensitiveListOrderingButton.Click += new System.EventHandler(this.CaseInsensitiveListOrderingButton_Click);
             // 
+            // PasswordPromptButton
+            // 
+            this.PasswordPromptButton.AutoSize = true;
+            this.PasswordPromptButton.Location = new System.Drawing.Point(251, 90);
+            this.PasswordPromptButton.Name = "PasswordPromptButton";
+            this.PasswordPromptButton.Size = new System.Drawing.Size(98, 23);
+            this.PasswordPromptButton.TabIndex = 9;
+            this.PasswordPromptButton.Text = "Password prompt";
+            this.PasswordPromptButton.UseVisualStyleBackColor = true;
+            this.PasswordPromptButton.Click += new System.EventHandler(this.PasswordPromptButton_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -179,6 +192,7 @@
         private System.Windows.Forms.TextBox WatermarkedTextBox;
         private System.Windows.Forms.Button ExceptionFormButton;
         private System.Windows.Forms.Button CaseInsensitiveListOrderingButton;
+        private System.Windows.Forms.Button PasswordPromptButton;
 
     }
 }
