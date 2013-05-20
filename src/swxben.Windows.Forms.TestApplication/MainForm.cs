@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Globalization;
 using System.Linq;
-using System.Collections.Generic;
 using System.Windows.Forms;
 using swxben.Windows.Forms.Controls;
 using swxben.Windows.Forms.Dialogs;
@@ -125,6 +124,24 @@ namespace swxben.Windows.Forms.TestApplication
                 };
             search.SetValues("Select your favourite vampire(s)", vampires, vampire => vampire.Name);
             MessageBox.Show(search.ShowDialog() != DialogResult.OK ? "Cancelled" : string.Format("Selected: {0}", string.Join(", ", search.SelectedItems.Select(v => v.Name))));
+        }
+
+        private void GenericDetailedListSearchMultiSelectButton_Click(object sender, EventArgs e)
+        {
+            IGenericDetailedListSearchMultiSelect<Vampire> search = new GenericDetailedListSearchMultiSelectDialog<Vampire>();
+            var vampires = new[]
+                {
+                    new Vampire {Name = "Bill", Age = 172},
+                    new Vampire {Name = "Jessica", Age = 17},
+                    new Vampire {Name = "Erik", Age = 1204}
+                };
+            search.SetValues(
+                "Select your favourite vampire",
+                vampires,
+                new[] {"Name", "Age"},
+                vampire => new[] {vampire.Name, vampire.Age.ToString(CultureInfo.InvariantCulture)});
+            search.FixWidth();
+            MessageBox.Show(search.ShowDialog() != DialogResult.OK ? "Cancelled" : string.Format("Selected {0}", string.Join(", ", search.SelectedItems.Select(v => v.Name))));
         }
 
         private class ItemRate

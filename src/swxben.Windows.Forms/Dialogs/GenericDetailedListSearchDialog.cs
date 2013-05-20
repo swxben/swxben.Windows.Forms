@@ -8,13 +8,13 @@ namespace swxben.Windows.Forms.Dialogs
 {
     public partial class GenericDetailedListSearchDialog<T> : Form, IGenericDetailedListSearch<T>
     {
-        private const string FILTER_PROMPT = "Search...";
+        private const string FilterPrompt = "Search...";
 
         IEnumerable<T> _source;
         bool _loading;
         Func<T, IEnumerable<string>> _displayCallback;
 
-        public T SelectedItem
+        public virtual T SelectedItem
         {
             get
             {
@@ -61,7 +61,7 @@ namespace swxben.Windows.Forms.Dialogs
             GenericListView.Columns.Clear();
             GenericListView.Columns.AddRange(columns.Select(c => new ColumnHeader { Text = c }).ToArray());
             Filter("");
-            SearchTextBox.SetWatermark(FILTER_PROMPT);
+            SearchTextBox.SetWatermark(FilterPrompt);
             _loading = false;
         }
 

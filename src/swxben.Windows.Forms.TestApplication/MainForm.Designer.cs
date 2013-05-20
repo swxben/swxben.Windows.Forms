@@ -40,6 +40,7 @@
             this.CaseInsensitiveListOrderingButton = new System.Windows.Forms.Button();
             this.PasswordPromptButton = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.GenericDetailedListSearchMultiSelectButton = new System.Windows.Forms.Button();
             this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,6 +57,7 @@
             this.flowLayoutPanel1.Controls.Add(this.CaseInsensitiveListOrderingButton);
             this.flowLayoutPanel1.Controls.Add(this.PasswordPromptButton);
             this.flowLayoutPanel1.Controls.Add(this.button1);
+            this.flowLayoutPanel1.Controls.Add(this.GenericDetailedListSearchMultiSelectButton);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
@@ -179,6 +181,17 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // GenericDetailedListSearchMultiSelectButton
+            // 
+            this.GenericDetailedListSearchMultiSelectButton.AutoSize = true;
+            this.GenericDetailedListSearchMultiSelectButton.Location = new System.Drawing.Point(165, 119);
+            this.GenericDetailedListSearchMultiSelectButton.Name = "GenericDetailedListSearchMultiSelectButton";
+            this.GenericDetailedListSearchMultiSelectButton.Size = new System.Drawing.Size(195, 23);
+            this.GenericDetailedListSearchMultiSelectButton.TabIndex = 11;
+            this.GenericDetailedListSearchMultiSelectButton.Text = "GenericDetailedListSearchMultiSelect";
+            this.GenericDetailedListSearchMultiSelectButton.UseVisualStyleBackColor = true;
+            this.GenericDetailedListSearchMultiSelectButton.Click += new System.EventHandler(this.GenericDetailedListSearchMultiSelectButton_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -207,6 +220,7 @@
         private System.Windows.Forms.Button CaseInsensitiveListOrderingButton;
         private System.Windows.Forms.Button PasswordPromptButton;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button GenericDetailedListSearchMultiSelectButton;
 
     }
 }

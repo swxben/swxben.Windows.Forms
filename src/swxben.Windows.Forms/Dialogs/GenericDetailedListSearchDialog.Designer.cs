@@ -148,7 +148,7 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Button CancelSelectionButton;
         private System.Windows.Forms.Button SelectItemButton;
-        private System.Windows.Forms.ListView GenericListView;
         private System.Windows.Forms.ColumnHeader columnHeader1;
+        protected System.Windows.Forms.ListView GenericListView;
     }
 }

@@ -56,7 +56,7 @@ Generic-typed item selection with string search.
 
 #### GenericListSearchMultiSelectDialog
 
-Subclass of `GenericListSearchDialog` which enabled multiple selections and adds a `IEnumerable<T> SelectedItems` accessor.
+Subclass of `GenericListSearchDialog` which enables multiple selections and adds a `IEnumerable<T> SelectedItems` accessor. Note that the `SelectedItem` setter throws a `NotImplementedException`.
 
 
 #### GenericDetailedListSearchDialog
@@ -75,6 +75,11 @@ Similar to `GenericListSearchDialog` but receives an array of column names, and 
     // search.SelectedItem is the selected Person object
 
 `GenericDetailedListSearchDialog` has a `FixWidth()` method which increases the width of the dialog based on the width of the items in the list.
+
+
+### GenericDetailedListSearchMultiSelectDialog
+
+Subclass of `GenericDetailedListSearchDialog` which enabled multiple selections and adds a `IEnumerable<T> SelectedItems` accessor. Note that the `SelectedItem` setter throws a `NotImplementedException`.
 
 
 #### StringListSearchDialog
