@@ -54,6 +54,11 @@ Generic-typed item selection with string search.
 `GenericListSearchDialog` has a `FixWidth()` method which increases the width of the dialog based on the width of the items in the list.
 
 
+#### GenericListSearchMultiSelectDialog
+
+Subclass of `GenericListSearchDialog` which enabled multiple selections and adds a `IEnumerable<T> SelectedItems` accessor.
+
+
 #### GenericDetailedListSearchDialog
 
 Similar to `GenericListSearchDialog` but receives an array of column names, and the display callback returns a corresponding array of column values.

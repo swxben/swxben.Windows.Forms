@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Globalization;
+using System.Linq;
+using System.Collections.Generic;
 using System.Windows.Forms;
 using swxben.Windows.Forms.Controls;
 using swxben.Windows.Forms.Dialogs;
@@ -22,11 +24,6 @@ namespace swxben.Windows.Forms.TestApplication
             MessageBox.Show(prompt.ShowDialog() != DialogResult.OK ? "Cancelled" : string.Format("Selected {0}", prompt.Value));
         }
 
-        class Vampire
-        {
-            public string Name;
-            public int Age;
-        }
         private void GenericListSearchButton_Click(object sender, EventArgs e)
         {
             IGenericListSearch<Vampire> search = new GenericListSearchDialog<Vampire>();
@@ -42,7 +39,7 @@ namespace swxben.Windows.Forms.TestApplication
 
         private void StringListSearchButton_Click(object sender, EventArgs e)
         {
-            IStringListSearch search = new StringListSearchDialog("Select a language", new[] { "C#", "C++", "Ruby", "Scala", "Javascript", "Java" });
+            IStringListSearch search = new StringListSearchDialog("Select a language", new[] {"C#", "C++", "Ruby", "Scala", "Javascript", "Java"});
             MessageBox.Show(search.ShowDialog() != DialogResult.OK ? "Cancelled" : string.Format("Selected {0}", search.SelectedItem));
         }
 
@@ -64,33 +61,27 @@ namespace swxben.Windows.Forms.TestApplication
             search.SetValues(
                 "Select your favourite vampire",
                 vampires,
-                new[] { "Name", "Age" },
-                vampire => new[] { vampire.Name, vampire.Age.ToString(CultureInfo.InvariantCulture) });
+                new[] {"Name", "Age"},
+                vampire => new[] {vampire.Name, vampire.Age.ToString(CultureInfo.InvariantCulture)});
             search.FixWidth();
             MessageBox.Show(search.ShowDialog() != DialogResult.OK ? "Cancelled" : string.Format("Selected {0}", search.SelectedItem.Name));
         }
 
-        class ItemRate
-        {
-            public string Category;
-            public string Code;
-            public string Description;
-        }
         private void GenericDetailedListSearchFixWidthButton_Click(object sender, EventArgs e)
         {
             IGenericDetailedListSearch<ItemRate> search = new GenericDetailedListSearchDialog<ItemRate>();
             var items = new[]
                 {
-                    new ItemRate {Category="Whitegoods", Code = "WG_KITCHEN_REFRIDGERATOR", Description = "Refridgerator" },
-                    new ItemRate {Category="Smallgoods", Code = "DELI_SALAMI", Description = "Salami" },
-                    new ItemRate {Category="Smallgoods", Code = "DELI_PASTRAMI", Description = "Pastrami" },
-                    new ItemRate {Category="Smallclothes", Code = "CLOTHING_UNDERWEAR_BOXERS", Description = "Nooo, briefs." }
+                    new ItemRate {Category = "Whitegoods", Code = "WG_KITCHEN_REFRIDGERATOR", Description = "Refridgerator"},
+                    new ItemRate {Category = "Smallgoods", Code = "DELI_SALAMI", Description = "Salami"},
+                    new ItemRate {Category = "Smallgoods", Code = "DELI_PASTRAMI", Description = "Pastrami"},
+                    new ItemRate {Category = "Smallclothes", Code = "CLOTHING_UNDERWEAR_BOXERS", Description = "Nooo, briefs."}
                 };
             search.SetValues(
                 "Select an item",
                 items,
-                new[] { "Category", "Code", "Description" },
-                i => new[] { i.Category, i.Code, i.Description });
+                new[] {"Category", "Code", "Description"},
+                i => new[] {i.Category, i.Code, i.Description});
             search.FixWidth();
             search.FixWidth();
             search.FixWidth();
@@ -105,7 +96,7 @@ namespace swxben.Windows.Forms.TestApplication
 
         private void CaseInsensitiveListOrderingButton_Click(object sender, EventArgs e)
         {
-            IStringListSearch search = new StringListSearchDialog("Case insensitive list ordering", new[] { "AAA", "AAb", "AAD", "YYZ", "yYY", "aAc" });
+            IStringListSearch search = new StringListSearchDialog("Case insensitive list ordering", new[] {"AAA", "AAb", "AAD", "YYZ", "yYY", "aAc"});
             search.Sort();
 
             // should be ordered AAA, AAb, aAc, AAD, yYY, YYZ
@@ -117,10 +108,36 @@ namespace swxben.Windows.Forms.TestApplication
         {
             var passwordPrompt = new TextPromptDialog("Enter a password:", "PASSWORD");
             passwordPrompt.SetIsPasswordPrompt(true);
-            if (passwordPrompt.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            if (passwordPrompt.ShowDialog() == DialogResult.OK)
             {
                 MessageBox.Show(string.Format("Password: {0}", passwordPrompt.Value));
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            IGenericListSearchMultiSelect<Vampire> search = new GenericListSearchMultiSelectDialog<Vampire>();
+            var vampires = new[]
+                {
+                    new Vampire {Name = "Bill", Age = 172},
+                    new Vampire {Name = "Jessica", Age = 17},
+                    new Vampire {Name = "Erik", Age = 1204}
+                };
+            search.SetValues("Select your favourite vampire(s)", vampires, vampire => vampire.Name);
+            MessageBox.Show(search.ShowDialog() != DialogResult.OK ? "Cancelled" : string.Format("Selected: {0}", string.Join(", ", search.SelectedItems.Select(v => v.Name))));
+        }
+
+        private class ItemRate
+        {
+            public string Category;
+            public string Code;
+            public string Description;
+        }
+
+        private class Vampire
+        {
+            public int Age;
+            public string Name;
         }
     }
 }

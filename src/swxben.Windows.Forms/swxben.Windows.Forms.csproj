@@ -57,6 +57,9 @@
     <Compile Include="Dialogs\ExceptionForm.Designer.cs">
       <DependentUpon>ExceptionForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Dialogs\GenericListSearchMultiSelectDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Dialogs\IGenericDetailedListSearch.cs" />
     <Compile Include="Dialogs\GenericDetailedListSearchDialog.cs">
       <SubType>Form</SubType>
@@ -78,6 +81,7 @@
     </Compile>
     <Compile Include="Dialogs\IDateTimePrompt.cs" />
     <Compile Include="Dialogs\IGenericListSearch.cs" />
+    <Compile Include="Dialogs\IGenericListSearchMultiSelect.cs" />
     <Compile Include="Dialogs\IStringListSearch.cs" />
     <Compile Include="Dialogs\ITextPrompt.cs" />
     <Compile Include="Dialogs\StringListSearchDialog.cs">
