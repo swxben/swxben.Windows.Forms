@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>swxben.Windows.Forms</id>
-    <version>1.8.0</version>
+    <version>1.9.0</version>
     <title>swxben.Windows.Forms</title>
     <authors>Software By Ben, Ben Scott, swxben, belfryimages</authors>
     <owners>Software By Ben, Ben Scott, swxben, belfryimages</owners>
@@ -11,7 +11,7 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>A small library of Winforms based dialogs and helpers</description>
     <summary>A small library of Winforms based dialogs and helpers</summary>
-    <releaseNotes>List search dialogs with support for multiple selections</releaseNotes>
+    <releaseNotes>New DateRangePromptDialog, set max date in existing DateTimePromptDialog</releaseNotes>
     <tags>forms winforms windows</tags>
   </metadata>
   <files>

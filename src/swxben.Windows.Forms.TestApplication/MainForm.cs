@@ -20,6 +20,8 @@ namespace swxben.Windows.Forms.TestApplication
         {
             IDateTimePrompt prompt = new DateTimePromptDialog();
             prompt.SetValues("Select a date", "Date selection", new DateTime(2013, 01, 01));
+            prompt.SetMinDate(new DateTime(2013,01,01));
+            prompt.SetMaxDate(new DateTime(2013, 12, 31));
             MessageBox.Show(prompt.ShowDialog() != DialogResult.OK ? "Cancelled" : string.Format("Selected {0}", prompt.Value));
         }
 

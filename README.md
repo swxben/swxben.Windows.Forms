@@ -41,6 +41,7 @@ Select a date.
     // reset values
     prompt.SetValues("Select invasion date (in the future)", "Select invasion date", DateTime.Now.Date.AddDays(1));
     prompt.SetMinDate(DateTime.Now.Date.AddDays(1));
+	prompt.SetMaxDate(DateTime.Now.Date.AddYears(1));
     
     prompt.ShowDialog();	// == DialogResult.OK or DialogResult.Cancel
 
@@ -151,7 +152,8 @@ Support for watermarking a textbox. Based on a [pastebin](http://pastebin.com/iF
 
 ### 1.9
 
-- New dialog: DateRangePromptDialog
+- Added the DateRangePromptDialog to select a date range
+- Added a maximum date to the DateTimePromptDialog
 
 
 ## Contribute

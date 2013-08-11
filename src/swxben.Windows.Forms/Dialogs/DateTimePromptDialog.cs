@@ -16,6 +16,11 @@ namespace swxben.Windows.Forms.Dialogs
             InputDateTimePicker.MinDate = minDate;
         }
 
+        public void SetMaxDate(DateTime maxDate)
+        {
+            InputDateTimePicker.MaxDate = maxDate;
+        }
+
         public DateTimePromptDialog()
         {
             InitializeComponent();
