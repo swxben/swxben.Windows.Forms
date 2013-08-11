@@ -16,6 +16,22 @@ Live, hopefully working examples are in the test application. All of the forms c
 ### swxben.Windows.Forms.Dialogs
 
 
+#### DateRangePromptDialog
+
+Select a from and to date.
+
+	var dateRangePrompt = new DateRangePromptDialog("Select the dates for the report (limited to 2013)",
+													"Select report range",
+													new DateTime(2013,06,01), new DateTime(2013,06,01));
+	dateRangePrompt.SetMinDate(new DateTime(2013, 01, 01));
+	dateRangePrompt.SetMaxDate(new DateTime(2013, 12, 31));
+
+	dateRangePrompt.ShowDialog;	// == DialogResult.Ok or DialogResult.Cancel
+
+	var fromResult = dateRangePrompt.FromValue;
+	var toResult = dateRangePrompt.ToValue;
+
+
 #### DateTimePromptDialog
 
 Select a date.
@@ -27,6 +43,8 @@ Select a date.
     prompt.SetMinDate(DateTime.Now.Date.AddDays(1));
     
     prompt.ShowDialog();	// == DialogResult.OK or DialogResult.Cancel
+
+	var result = prompt.Value;
 
 
 #### ExceptionForm
@@ -127,6 +145,13 @@ Support for watermarking a textbox. Based on a [pastebin](http://pastebin.com/iF
     using swxben.Windows.Forms.Controls;
     //...
     textBox.SetWatermark("Username");
+
+
+## Release notes
+
+### 1.9
+
+- New dialog: DateRangePromptDialog
 
 
 ## Contribute

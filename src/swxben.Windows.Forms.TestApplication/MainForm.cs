@@ -156,5 +156,25 @@ namespace swxben.Windows.Forms.TestApplication
             public int Age;
             public string Name;
         }
+
+        private void DateRangePromptButton_Click(object sender, EventArgs e)
+        {
+            var dateRangePrompt = new DateRangePromptDialog("Select the dates for the report (limited to 2013)",
+                                                            "Select report range",
+                                                            new DateTime(2013,06,01), new DateTime(2013,06,01));
+            dateRangePrompt.SetMinDate(new DateTime(2013, 01, 01));
+            dateRangePrompt.SetMaxDate(new DateTime(2013, 12, 31));
+
+            var result = dateRangePrompt.ShowDialog();
+            
+            if (result != DialogResult.OK)
+            {
+                MessageBox.Show("cancelled");
+            }
+            else
+            {
+                MessageBox.Show(string.Format("From {0} to {1}", dateRangePrompt.FromValue, dateRangePrompt.ToValue));
+            }
+        }
     }
 }

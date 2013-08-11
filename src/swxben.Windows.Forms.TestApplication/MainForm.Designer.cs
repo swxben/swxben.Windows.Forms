@@ -41,6 +41,7 @@
             this.PasswordPromptButton = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.GenericDetailedListSearchMultiSelectButton = new System.Windows.Forms.Button();
+            this.DateRangePromptButton = new System.Windows.Forms.Button();
             this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,6 +59,7 @@
             this.flowLayoutPanel1.Controls.Add(this.PasswordPromptButton);
             this.flowLayoutPanel1.Controls.Add(this.button1);
             this.flowLayoutPanel1.Controls.Add(this.GenericDetailedListSearchMultiSelectButton);
+            this.flowLayoutPanel1.Controls.Add(this.DateRangePromptButton);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
@@ -192,6 +194,18 @@
             this.GenericDetailedListSearchMultiSelectButton.UseVisualStyleBackColor = true;
             this.GenericDetailedListSearchMultiSelectButton.Click += new System.EventHandler(this.GenericDetailedListSearchMultiSelectButton_Click);
             // 
+            // DateRangePromptButton
+            // 
+            this.DateRangePromptButton.AutoSize = true;
+            this.DateRangePromptButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.DateRangePromptButton.Location = new System.Drawing.Point(3, 148);
+            this.DateRangePromptButton.Name = "DateRangePromptButton";
+            this.DateRangePromptButton.Size = new System.Drawing.Size(105, 23);
+            this.DateRangePromptButton.TabIndex = 12;
+            this.DateRangePromptButton.Text = "DateRangePrompt";
+            this.DateRangePromptButton.UseVisualStyleBackColor = true;
+            this.DateRangePromptButton.Click += new System.EventHandler(this.DateRangePromptButton_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -221,6 +235,7 @@
         private System.Windows.Forms.Button PasswordPromptButton;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button GenericDetailedListSearchMultiSelectButton;
+        private System.Windows.Forms.Button DateRangePromptButton;
 
     }
 }

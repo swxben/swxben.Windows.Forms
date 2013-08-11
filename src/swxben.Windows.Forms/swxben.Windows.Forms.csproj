@@ -45,6 +45,13 @@
   <ItemGroup>
     <Compile Include="Controls\ListViewAutoResizeColumnsSmartExtension.cs" />
     <Compile Include="Controls\TextBoxWatermarkExtension.cs" />
+    <Compile Include="Dialogs\IDateRangePrompt.cs" />
+    <Compile Include="Dialogs\DateRangePromptDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\DateRangePromptDialog.Designer.cs">
+      <DependentUpon>DateRangePromptDialog.cs</DependentUpon>
+    </Compile>
     <Compile Include="Dialogs\ExceptionDetailsForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,6 +113,9 @@
     <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Dialogs\DateRangePromptDialog.resx">
+      <DependentUpon>DateRangePromptDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Dialogs\ExceptionDetailsForm.resx">
       <DependentUpon>ExceptionDetailsForm.cs</DependentUpon>
     </EmbeddedResource>
