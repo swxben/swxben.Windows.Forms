@@ -41,23 +41,44 @@ namespace swxben.Windows.Forms.Dialogs
         public GenericDetailedListSearchDialog(string title, IEnumerable<T> source, IEnumerable<string> columns, Func<T, IEnumerable<string>> displayCallback)
         {
             InitializeComponent();
-            SetValues(title, source, columns, displayCallback);
+            SetValues(
+                title,
+                source,
+                columns,
+                displayCallback,
+                new ListViewItemTextComparer.ColumnFormat[0]);
+        }
+
+        public GenericDetailedListSearchDialog(string title, IEnumerable<T> source, IEnumerable<string> columns, Func<T, IEnumerable<string>> displayCallback, IEnumerable<ListViewItemTextComparer.ColumnFormat> columnFormats)
+        {
+            InitializeComponent();
+            SetValues(
+                title,
+                source,
+                columns,
+                displayCallback,
+                columnFormats.ToArray());
         }
 
         public void SetValues(string title, IEnumerable<T> source, IEnumerable<string> columns, Func<T, IEnumerable<string>> displayCallback)
+        {
+            SetValues(title, source, columns, displayCallback, new ListViewItemTextComparer.ColumnFormat[0]);
+        }
+
+        public void SetValues(string title, IEnumerable<T> source, IEnumerable<string> columns, Func<T, IEnumerable<string>> displayCallback, IEnumerable<ListViewItemTextComparer.ColumnFormat> columnFormats)
         {
             Text = title;
             _source = source;
             _displayCallback = displayCallback;
 
-            LoadControl(columns);
+            LoadControl(columns, columnFormats.ToArray());
             RefreshControl();
         }
 
-        void LoadControl(IEnumerable<string> columns)
+        void LoadControl(IEnumerable<string> columns, ListViewItemTextComparer.ColumnFormat[] columnFormats)
         {
             _loading = true;
-            ListViewItemTextComparer.AssignTo(GenericListView);
+            ListViewItemTextComparer.AssignTo(GenericListView, columnFormats);
             GenericListView.Columns.Clear();
             GenericListView.Columns.AddRange(columns.Select(c => new ColumnHeader { Text = c }).ToArray());
             Filter("");

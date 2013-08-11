@@ -95,6 +95,8 @@ Similar to `GenericListSearchDialog` but receives an array of column names, and 
 
 `GenericDetailedListSearchDialog` has a `FixWidth()` method which increases the width of the dialog based on the width of the items in the list.
 
+`GenericDetailedListSearchDialog`'s constructor and `SetValues()` method takes an optional `columnFormats` parameter which is used bu the `ListViewItemTextComparer` to provide hinting for the column sorting.
+
 
 ### GenericDetailedListSearchMultiSelectDialog
 
@@ -149,6 +151,10 @@ Support for watermarking a textbox. Based on a [pastebin](http://pastebin.com/iF
 
 
 ## Release notes
+
+### 1.10
+
+- Added column formats to GenericDetailedListSearchDialog
 
 ### 1.9
 

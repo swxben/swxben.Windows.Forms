@@ -5,8 +5,6 @@ namespace swxben.Windows.Forms.Dialogs
 {
     public partial class DateRangePromptDialog : Form, IDateRangePrompt
     {
-        private bool _loading;
-
         public DateTime FromValue
         {
             get { return InputFromDateTimePicker.Value; }
@@ -77,13 +75,11 @@ namespace swxben.Windows.Forms.Dialogs
 
         private void InputFromDateTimePicker_ValueChanged(object sender, EventArgs e)
         {
-            if (_loading) return;
             InputToDateTimePicker.MinDate = InputFromDateTimePicker.Value;
         }
 
         private void InputToDateTimePicker_ValueChanged(object sender, EventArgs e)
         {
-            if (_loading) return;
             InputFromDateTimePicker.MaxDate = InputToDateTimePicker.Value;
         }
     }

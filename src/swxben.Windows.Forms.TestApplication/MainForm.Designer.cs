@@ -42,6 +42,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.GenericDetailedListSearchMultiSelectButton = new System.Windows.Forms.Button();
             this.DateRangePromptButton = new System.Windows.Forms.Button();
+            this.GenericDetailedListSearchWithColumnFormats = new System.Windows.Forms.Button();
             this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -60,6 +61,7 @@
             this.flowLayoutPanel1.Controls.Add(this.button1);
             this.flowLayoutPanel1.Controls.Add(this.GenericDetailedListSearchMultiSelectButton);
             this.flowLayoutPanel1.Controls.Add(this.DateRangePromptButton);
+            this.flowLayoutPanel1.Controls.Add(this.GenericDetailedListSearchWithColumnFormats);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
@@ -206,6 +208,17 @@
             this.DateRangePromptButton.UseVisualStyleBackColor = true;
             this.DateRangePromptButton.Click += new System.EventHandler(this.DateRangePromptButton_Click);
             // 
+            // GenericDetailedListSearchWithColumnFormats
+            // 
+            this.GenericDetailedListSearchWithColumnFormats.AutoSize = true;
+            this.GenericDetailedListSearchWithColumnFormats.Location = new System.Drawing.Point(114, 148);
+            this.GenericDetailedListSearchWithColumnFormats.Name = "GenericDetailedListSearchWithColumnFormats";
+            this.GenericDetailedListSearchWithColumnFormats.Size = new System.Drawing.Size(239, 23);
+            this.GenericDetailedListSearchWithColumnFormats.TabIndex = 13;
+            this.GenericDetailedListSearchWithColumnFormats.Text = "GenericDetailedListSearch with column formats";
+            this.GenericDetailedListSearchWithColumnFormats.UseVisualStyleBackColor = true;
+            this.GenericDetailedListSearchWithColumnFormats.Click += new System.EventHandler(this.GenericDetailedListSearchWithColumnFormats_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -236,6 +249,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button GenericDetailedListSearchMultiSelectButton;
         private System.Windows.Forms.Button DateRangePromptButton;
+        private System.Windows.Forms.Button GenericDetailedListSearchWithColumnFormats;
 
     }
 }

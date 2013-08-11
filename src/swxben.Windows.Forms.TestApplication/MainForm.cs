@@ -84,8 +84,6 @@ namespace swxben.Windows.Forms.TestApplication
                 new[] {"Category", "Code", "Description"},
                 i => new[] {i.Category, i.Code, i.Description});
             search.FixWidth();
-            search.FixWidth();
-            search.FixWidth();
             MessageBox.Show(search.ShowDialog() != DialogResult.OK ? "Cancelled" : string.Format("Selected {0}", search.SelectedItem.Code));
         }
 
@@ -177,6 +175,125 @@ namespace swxben.Windows.Forms.TestApplication
             {
                 MessageBox.Show(string.Format("From {0} to {1}", dateRangePrompt.FromValue, dateRangePrompt.ToValue));
             }
+        }
+
+        class KeyDateInWwi
+        {
+            public DateTime Date { get; set; }
+            public string Theatre { get; set; }
+            public string Description { get; set; }
+        }
+
+        private void GenericDetailedListSearchWithColumnFormats_Click(object sender, EventArgs e)
+        {
+            var dates = GetWorldWarOneDates();
+            var search = new GenericDetailedListSearchDialog<KeyDateInWwi>();
+            search.SetValues(
+                "Select an item",
+                dates,
+                new[] { "Date", "Theatre", "Description" },
+                i => new[] { i.Date.ToString("dd/MM/yyyy"), i.Theatre, i.Description },
+                new[] { ListViewItemTextComparer.ColumnFormat.Date, ListViewItemTextComparer.ColumnFormat.Text, ListViewItemTextComparer.ColumnFormat.Text });
+            search.Sort();
+            search.FixWidth();
+            MessageBox.Show(search.ShowDialog() != DialogResult.OK ? "Cancelled" : string.Format("Selected {0}", search.SelectedItem.Date));
+        }
+
+        private KeyDateInWwi[] GetWorldWarOneDates()
+        {
+            return new[]
+                {
+                    new KeyDateInWwi
+                        {
+                            Date = new DateTime(1914, 08, 12),
+                            Theatre = "Diplomacy",
+                            Description = "The United Kingdom declares war on Austria-Hungary."
+                        },
+                    new KeyDateInWwi
+                        {
+                            Date = new DateTime(1914, 08, 9),
+                            Theatre = "Colonial",
+                            Description = "The Togoland Campaign begins."
+                        },
+                    new KeyDateInWwi
+                        {
+                            Date = new DateTime(1914, 08, 11),
+                            Theatre = "Diplomacy",
+                            Description = "France declares war on Austria-Hungary."
+                        },
+                    new KeyDateInWwi
+                        {
+                            Date = new DateTime(1914, 08, 16),
+                            Theatre = "Balkan",
+                            Description = "The Serbs defeat the Austro-Hungarians at the Battle of Cer."
+                        },
+                    new KeyDateInWwi
+                        {
+                            Date = new DateTime(1914, 08, 17),
+                            Theatre = "Eastern",
+                            Description = "The Russian army enters East Prussia. Battle of Stalluponen."
+                        },
+                    new KeyDateInWwi
+                        {
+                            Date = new DateTime(1914, 08, 20),
+                            Theatre = "Eastern",
+                            Description = "The Germans attack the Russians in East Prussia."
+                        },
+                    new KeyDateInWwi
+                        {
+                            Date = new DateTime(1914, 08, 12),
+                            Theatre = "Western",
+                            Description = "Battle of Haelen, a phase of the Battle of the Frontiers."
+                        },
+                    new KeyDateInWwi
+                        {
+                            Date = new DateTime(1914, 08, 14),
+                            Theatre = "Western",
+                            Description = "Battle of Lorraine, a phase of the battle of the Frontiers."
+                        },
+                    new KeyDateInWwi
+                        {
+                            Date = new DateTime(1914, 08, 7),
+                            Theatre = "Western",
+                            Description = "The British Expeditionary Force arrives in France."
+                        },
+                    new KeyDateInWwi
+                        {
+                            Date = new DateTime(1914, 08, 7),
+                            Theatre = "Western",
+                            Description = "Battle of the Frontiers."
+                        },
+                    new KeyDateInWwi
+                        {
+                            Date = new DateTime(1914, 08, 7),
+                            Theatre = "Western",
+                            Description = "Battle of Mulhouse, a phase of the Battle of the Frontiers."
+                        },
+                    new KeyDateInWwi
+                        {
+                            Date = new DateTime(1914, 08, 9),
+                            Theatre = "Diplomacy",
+                            Description = "Montenegro declares war on Germany."
+                        },
+                    new KeyDateInWwi
+                        {
+                            Date = new DateTime(1914, 08, 20),
+                            Theatre = "Western",
+                            Description = "The Germans occupy Brussels."
+                        },
+                    new KeyDateInWwi
+                        {
+                            Date = new DateTime(1914, 08, 21),
+                            Theatre = "Western",
+                            Description = "Battle of Charleroi, a phase of the Battle of the Frontiers."
+                        },
+                    new KeyDateInWwi
+                        {
+                            Date = new DateTime(1914, 08, 21),
+                            Theatre = "Western",
+                            Description = "Battle of the Ardennes, a phase of the Battle of the Frontiers."
+                        },
+                };
         }
     }
 }
